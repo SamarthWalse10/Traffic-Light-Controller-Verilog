@@ -18,7 +18,7 @@ Simulation and testing were performed using Xilinx Vivado 2022.2.
 - Simulation-ready testbench for validation under various traffic scenarios.
 - FPGA-compatible design for hardware implementation in real-world applications.
 ## Contents
-The src directory contains the Verilog source code for the 64x8bit RAM. The sim directory includes the simulation files and test bench code.
+The src directory contains the Verilog source code for the Traffic Light Controller. The sim directory includes the simulation files and test bench code.
 ## Getting Started
 1. Clone the repository:
    ```bash
