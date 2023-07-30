@@ -23,7 +23,7 @@ The src directory contains the Verilog source code for the Traffic Light Control
 1. Clone the repository:
    ```bash
    git clone https://github.com/SamarthWalse10/Traffic-Light-Controller-Verilog.git
-2. Open the traffic_light_controller.xpr file in processor folder using Xilinx Vivado Software or in your preferred Verilog development environment.
+2. Open the traffic_light_controller.xpr file using Xilinx Vivado Software or in your preferred Verilog development environment.
 3. Compile and synthesize the Verilog source code.
 4. Now Run Simulation (using the provided test bench) and RTL Analysis in Xilinx Vivado to see Result.
 5. Analyze the simulation results and verify the functionality of the Traffic Light Controller.
