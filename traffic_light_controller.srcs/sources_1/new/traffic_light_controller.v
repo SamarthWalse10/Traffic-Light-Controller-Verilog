@@ -1,10 +1,9 @@
 `timescale 1ns / 1ps
 
 
-module traffic_light_controller #(parameter RED = 2'd2, parameter YELLOW = 2'd1, parameter GREEN = 2'd0)(
-    input rst,clk,t,
-    output reg [1:0]cnt_sig,hgw_sig
-);
+module traffic_light_controller #(parameter RED = 2'd2, parameter YELLOW = 2'd1, parameter GREEN = 2'd0)(rst,clk,t,cnt_sig,hgw_sig);
+input rst,clk,t;
+output reg [1:0]cnt_sig,hgw_sig;
 
 reg [2:0] state,next_state;
 

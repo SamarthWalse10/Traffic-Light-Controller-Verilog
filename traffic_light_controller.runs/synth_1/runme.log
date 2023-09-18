@@ -10,6 +10,7 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source traffic_light_controller.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 393.773 ; gain = 69.160
 Command: read_checkpoint -auto_incremental -incremental D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/utils_1/imports/synth_1/traffic_light_controller.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/utils_1/imports/synth_1/traffic_light_controller.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -22,63 +23,66 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7544
+INFO: [Synth 8-7075] Helper process launched with PID 25628
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/installs/Vivado/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1209.145 ; gain = 408.590
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1209.160 ; gain = 408.582
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'traffic_light_controller' [D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/sources_1/new/traffic_light_controller.v:4]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/sources_1/new/traffic_light_controller.v:27]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/sources_1/new/traffic_light_controller.v:25]
 INFO: [Synth 8-6155] done synthesizing module 'traffic_light_controller' (0#1) [D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/sources_1/new/traffic_light_controller.v:4]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1298.832 ; gain = 498.277
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1299.531 ; gain = 498.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1298.832 ; gain = 498.277
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1299.531 ; gain = 498.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1298.832 ; gain = 498.277
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1299.531 ; gain = 498.953
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1298.832 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1299.531 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/constrs_1/new/main.xdc]
+WARNING: [Vivado 12-584] No ports matched 'Fclk'. [D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/constrs_1/new/main.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/constrs_1/new/main.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/constrs_1/new/main.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/constrs_1/new/main.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/traffic_light_controller_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/traffic_light_controller_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1362.996 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1363.070 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1362.996 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1363.070 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/installs/Vivado/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'traffic_light_controller'
-WARNING: [Synth 8-327] inferring latch for variable 'cnt_sig_reg' [D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/sources_1/new/traffic_light_controller.v:29]
+WARNING: [Synth 8-327] inferring latch for variable 'cnt_sig_reg' [D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/sources_1/new/traffic_light_controller.v:27]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -89,9 +93,9 @@ WARNING: [Synth 8-327] inferring latch for variable 'cnt_sig_reg' [D:/samarth_pe
                  iSTATE3 |                              100 |                              100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'traffic_light_controller'
-WARNING: [Synth 8-327] inferring latch for variable 'hgw_sig_reg' [D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/sources_1/new/traffic_light_controller.v:29]
+WARNING: [Synth 8-327] inferring latch for variable 'hgw_sig_reg' [D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/sources_1/new/traffic_light_controller.v:27]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -119,25 +123,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:29 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:29 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:29 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -155,37 +159,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -210,27 +214,28 @@ Report Cell Usage:
 |7     |OBUF |     4|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1363.070 ; gain = 562.492
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1362.996 ; gain = 498.277
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1362.996 ; gain = 562.441
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1363.070 ; gain = 498.953
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1363.070 ; gain = 562.492
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1362.996 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1363.070 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1362.996 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1363.070 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   LD => LDCE: 4 instances
 
 Synth Design complete, checksum: a38c4e7c
 INFO: [Common 17-83] Releasing license: Synthesis
-28 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+28 Infos, 4 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 1362.996 ; gain = 944.242
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 1363.070 ; gain = 944.402
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.runs/synth_1/traffic_light_controller.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file traffic_light_controller_utilization_synth.rpt -pb traffic_light_controller_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Sep 18 15:29:02 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 19 01:18:39 2023...
