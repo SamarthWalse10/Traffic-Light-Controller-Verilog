@@ -8,14 +8,13 @@ module traffic_light_controller #(parameter RED = 2'd2, parameter YELLOW = 2'd1,
 
 reg [2:0] state,next_state;
 
-initial begin
-    state = 3'd0; next_state = 3'd0;
-    hgw_sig = GREEN; cnt_sig  = RED;
-end
+// initial begin
+//     state = 3'd0; next_state = 3'd0;
+//     hgw_sig = GREEN; cnt_sig  = RED;
+// end
 
 always @(posedge clk or posedge rst) begin
     if (rst == 1'b1) begin
-        // next_state = 3'd0;
         state = 3'd0;
     end
     else begin
