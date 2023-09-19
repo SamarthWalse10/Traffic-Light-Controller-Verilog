@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Tue Sep 19 01:30:35 2023
-# Process ID: 23772
+# Start of session at: Tue Sep 19 12:01:45 2023
+# Process ID: 9016
 # Current directory: D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.runs/synth_1
-# Command line: vivado.exe -log traffic_light_controller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source traffic_light_controller.tcl
-# Log file: D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.runs/synth_1/traffic_light_controller.vds
+# Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+# Log file: D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.runs/synth_1/main.vds
 # Journal file: D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.runs/synth_1\vivado.jou
 # Running On: Samarth, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 16936 MB
 #-----------------------------------------------------------
-source traffic_light_controller.tcl -notrace
+source main.tcl -notrace

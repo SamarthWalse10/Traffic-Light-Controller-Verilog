@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.runs/impl_1/traffic_light_controller.tcl"
+  variable script "D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.runs/impl_1/main.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,7 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 
@@ -127,7 +126,7 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 2
-  set_param synth.incrementalSynthesisCache {C:/Users/Samarth Walse/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-3460-Samarth/incrSyn}
+  set_param synth.incrementalSynthesisCache {C:/Users/Samarth Walse/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-23504-Samarth/incrSyn}
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z010clg400-1
   set_property design_mode GateLvl [current_fileset]
@@ -140,13 +139,13 @@ OPTRACE "set parameters" START { }
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.runs/synth_1/traffic_light_controller.dcp
+  add_files -quiet D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.runs/synth_1/main.dcp
 OPTRACE "read constraints: implementation" START { }
   read_xdc D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.srcs/constrs_1/new/main.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
-  link_design -top traffic_light_controller -part xc7z010clg400-1 
+  link_design -top main -part xc7z010clg400-1 
 OPTRACE "link_design" END { }
 OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }
@@ -178,10 +177,10 @@ OPTRACE "opt_design" END { }
 OPTRACE "read constraints: opt_design_post" START { }
 OPTRACE "read constraints: opt_design_post" END { }
 OPTRACE "Opt Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force traffic_light_controller_opt.dcp
+  write_checkpoint -force main_opt.dcp
 OPTRACE "Opt Design: write_checkpoint" END { }
 OPTRACE "opt_design reports" START { REPORT }
-  create_report "impl_1_opt_report_drc_0" "report_drc -file traffic_light_controller_drc_opted.rpt -pb traffic_light_controller_drc_opted.pb -rpx traffic_light_controller_drc_opted.rpx"
+  create_report "impl_1_opt_report_drc_0" "report_drc -file main_drc_opted.rpt -pb main_drc_opted.pb -rpx main_drc_opted.rpx"
 OPTRACE "opt_design reports" END { }
   close_msg_db -file opt_design.pb
 } RESULT]
@@ -212,12 +211,12 @@ OPTRACE "place_design" END { }
 OPTRACE "read constraints: place_design_post" START { }
 OPTRACE "read constraints: place_design_post" END { }
 OPTRACE "Place Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force traffic_light_controller_placed.dcp
+  write_checkpoint -force main_placed.dcp
 OPTRACE "Place Design: write_checkpoint" END { }
 OPTRACE "place_design reports" START { REPORT }
-  create_report "impl_1_place_report_io_0" "report_io -file traffic_light_controller_io_placed.rpt"
-  create_report "impl_1_place_report_utilization_0" "report_utilization -file traffic_light_controller_utilization_placed.rpt -pb traffic_light_controller_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file traffic_light_controller_control_sets_placed.rpt"
+  create_report "impl_1_place_report_io_0" "report_io -file main_io_placed.rpt"
+  create_report "impl_1_place_report_utilization_0" "report_utilization -file main_utilization_placed.rpt -pb main_utilization_placed.pb"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file main_control_sets_placed.rpt"
 OPTRACE "place_design reports" END { }
   close_msg_db -file place_design.pb
 } RESULT]
@@ -243,7 +242,7 @@ OPTRACE "phys_opt_design" END { }
 OPTRACE "read constraints: phys_opt_design_post" START { }
 OPTRACE "read constraints: phys_opt_design_post" END { }
 OPTRACE "Post-Place Phys Opt Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force traffic_light_controller_physopt.dcp
+  write_checkpoint -force main_physopt.dcp
 OPTRACE "Post-Place Phys Opt Design: write_checkpoint" END { }
 OPTRACE "phys_opt_design report" START { REPORT }
 OPTRACE "phys_opt_design report" END { }
@@ -271,17 +270,17 @@ OPTRACE "route_design" END { }
 OPTRACE "read constraints: route_design_post" START { }
 OPTRACE "read constraints: route_design_post" END { }
 OPTRACE "Route Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force traffic_light_controller_routed.dcp
+  write_checkpoint -force main_routed.dcp
 OPTRACE "Route Design: write_checkpoint" END { }
 OPTRACE "route_design reports" START { REPORT }
-  create_report "impl_1_route_report_drc_0" "report_drc -file traffic_light_controller_drc_routed.rpt -pb traffic_light_controller_drc_routed.pb -rpx traffic_light_controller_drc_routed.rpx"
-  create_report "impl_1_route_report_methodology_0" "report_methodology -file traffic_light_controller_methodology_drc_routed.rpt -pb traffic_light_controller_methodology_drc_routed.pb -rpx traffic_light_controller_methodology_drc_routed.rpx"
-  create_report "impl_1_route_report_power_0" "report_power -file traffic_light_controller_power_routed.rpt -pb traffic_light_controller_power_summary_routed.pb -rpx traffic_light_controller_power_routed.rpx"
-  create_report "impl_1_route_report_route_status_0" "report_route_status -file traffic_light_controller_route_status.rpt -pb traffic_light_controller_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -report_unconstrained -file traffic_light_controller_timing_summary_routed.rpt -pb traffic_light_controller_timing_summary_routed.pb -rpx traffic_light_controller_timing_summary_routed.rpx -warn_on_violation "
-  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file traffic_light_controller_incremental_reuse_routed.rpt"
-  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file traffic_light_controller_clock_utilization_routed.rpt"
-  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file traffic_light_controller_bus_skew_routed.rpt -pb traffic_light_controller_bus_skew_routed.pb -rpx traffic_light_controller_bus_skew_routed.rpx"
+  create_report "impl_1_route_report_drc_0" "report_drc -file main_drc_routed.rpt -pb main_drc_routed.pb -rpx main_drc_routed.rpx"
+  create_report "impl_1_route_report_methodology_0" "report_methodology -file main_methodology_drc_routed.rpt -pb main_methodology_drc_routed.pb -rpx main_methodology_drc_routed.rpx"
+  create_report "impl_1_route_report_power_0" "report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx"
+  create_report "impl_1_route_report_route_status_0" "report_route_status -file main_route_status.rpt -pb main_route_status.pb"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -report_unconstrained -file main_timing_summary_routed.rpt -pb main_timing_summary_routed.pb -rpx main_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file main_incremental_reuse_routed.rpt"
+  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file main_clock_utilization_routed.rpt"
+  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file main_bus_skew_routed.rpt -pb main_bus_skew_routed.pb -rpx main_bus_skew_routed.rpx"
 OPTRACE "route_design reports" END { }
 OPTRACE "route_design misc" START { }
   close_msg_db -file route_design.pb
@@ -289,7 +288,7 @@ OPTRACE "route_design misc" START { }
 if {$rc} {
 OPTRACE "route_design write_checkpoint" START { CHECKPOINT }
 OPTRACE "route_design write_checkpoint" END { }
-  write_checkpoint -force traffic_light_controller_routed_error.dcp
+  write_checkpoint -force main_routed_error.dcp
   step_failed route_design
   return -code error $RESULT
 } else {
@@ -299,4 +298,34 @@ OPTRACE "route_design write_checkpoint" END { }
 
 OPTRACE "route_design misc" END { }
 OPTRACE "Phase: Route Design" END { }
+OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
+OPTRACE "write_bitstream setup" START { }
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+OPTRACE "read constraints: write_bitstream" START { }
+OPTRACE "read constraints: write_bitstream" END { }
+  catch { write_mem_info -force -no_partial_mmi main.mmi }
+OPTRACE "write_bitstream setup" END { }
+OPTRACE "write_bitstream" START { }
+  write_bitstream -force main.bit 
+OPTRACE "write_bitstream" END { }
+OPTRACE "write_bitstream misc" START { }
+OPTRACE "read constraints: write_bitstream_post" START { }
+OPTRACE "read constraints: write_bitstream_post" END { }
+  catch {write_debug_probes -quiet -force main}
+  catch {file copy -force main.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "write_bitstream misc" END { }
+OPTRACE "Phase: Write Bitstream" END { }
 OPTRACE "impl_1" END { }
