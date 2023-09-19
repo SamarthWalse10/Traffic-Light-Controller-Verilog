@@ -30,6 +30,6 @@ The src directory contains the Verilog source code for the Traffic Light Control
 ## Screenshots
 ![null](https://github.com/SamarthWalse10/Traffic-Light-Controller-Verilog/assets/125689593/fb14ab64-beb5-47c1-b874-df86ffe97c9a)
 <br/>
-![Screenshot 2023-07-25 072240](https://github.com/SamarthWalse10/Traffic-Light-Controller-Verilog/assets/125689593/7156fb3d-5d8f-4147-b884-dde5a1f801a3)
+![image](https://github.com/SamarthWalse10/Traffic-Light-Controller-Verilog/assets/125689593/19429df6-03b4-48ae-b647-d02f1747b02b)
 <br/><br/><br/>
 ![Screenshot 2023-07-30 121443](https://github.com/SamarthWalse10/Traffic-Light-Controller-Verilog/assets/125689593/5e712248-e18d-48ad-b9f4-a59a32462424)
