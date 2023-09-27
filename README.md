@@ -17,6 +17,7 @@ Simulation and testing were performed using Xilinx Vivado 2022.2.
 - Scalable and reusable design for easy integration into other Verilog projects.
 - Simulation-ready testbench for validation under various traffic scenarios.
 - FPGA-compatible design for hardware implementation in real-world applications.
+- Tested its working on Zynq-7000 soc, xc7z010clg400-1
 ## Contents
 The src directory contains the Verilog source code for the Traffic Light Controller. The sim directory includes the simulation files and test bench code.
 ## Getting Started
