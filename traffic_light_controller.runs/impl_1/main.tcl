@@ -127,7 +127,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 2
-  set_param synth.incrementalSynthesisCache {C:/Users/Samarth Walse/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-23108-Samarth/incrSyn}
+  set_param synth.incrementalSynthesisCache {C:/Users/Samarth Walse/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-17024-Samarth/incrSyn}
   open_checkpoint main_routed.dcp
   set_property webtalk.parent_dir D:/samarth_personal/programming/Verilog/traffic_light_controller/traffic_light_controller.cache/wt [current_project]
 set_property TOP main [current_fileset]

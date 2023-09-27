@@ -1,9 +1,9 @@
 `timescale 1ns / 1ps
 
 
-// frquency = 125MHz/125000000 = 1Hz
-// module clk_divider #(parameter DIVISOR = 32'd125000000)(rst,Fclk,clk);
-module clk_divider #(parameter DIVISOR = 32'd2)(Fclk,clk);
+// frquency = 125MHz/2x125000000 = 0.5Hz
+module clk_divider #(parameter DIVISOR = 32'd250000000)(Fclk,clk);
+// module clk_divider #(parameter DIVISOR = 32'd2)(Fclk,clk);
 input Fclk;
 output reg clk;
 

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Tue Sep 19 12:40:25 2023
+| Date             : Wed Sep 27 15:59:51 2023
 | Host             : Samarth running 64-bit major release  (build 9200)
 | Command          : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
 | Design           : main
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.540        |
+| Total On-Chip Power (W)  | 0.668        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.442        |
-| Device Static (W)        | 0.098        |
+| Dynamic (W)              | 0.568        |
+| Device Static (W)        | 0.100        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 78.8         |
-| Junction Temperature (C) | 31.2         |
+| Max Ambient (C)          | 77.3         |
+| Junction Temperature (C) | 32.7         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,15 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.076 |       24 |       --- |             --- |
-|   LUT as Logic |     0.063 |        5 |     17600 |            0.03 |
-|   Register     |     0.007 |        9 |     35200 |            0.03 |
+| Slice Logic    |     0.135 |       72 |       --- |             --- |
+|   LUT as Logic |     0.099 |       18 |     17600 |            0.10 |
+|   CARRY4       |     0.015 |        7 |      4400 |            0.16 |
+|   Register     |     0.014 |       36 |     35200 |            0.10 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |     0.076 |       19 |       --- |             --- |
+| Signals        |     0.143 |       64 |       --- |             --- |
 | I/O            |     0.291 |        7 |       100 |            7.00 |
-| Static Power   |     0.098 |          |           |                 |
-| Total          |     0.540 |          |           |                 |
+| Static Power   |     0.100 |          |           |                 |
+| Total          |     0.668 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,8 +71,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.164 |       0.160 |      0.004 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.016 |       0.010 |      0.006 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.290 |       0.286 |      0.005 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.017 |       0.010 |      0.006 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.081 |       0.080 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -83,7 +84,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.019 |       0.000 |      0.019 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -144,8 +145,8 @@ Table of Contents
 +-------+-----------+
 | Name  | Power (W) |
 +-------+-----------+
-| main  |     0.442 |
-|   cd  |     0.052 |
+| main  |     0.568 |
+|   cd  |     0.177 |
 |   tlc |     0.080 |
 +-------+-----------+
 
